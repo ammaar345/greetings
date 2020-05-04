@@ -1,0 +1,13 @@
+body{font-size: 150%;
+background-color: blueviolet;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+padding-left: 5em;
+padding-right: 5em;
+padding-top: 2em;
+margin: 0;}
+.space{
+    margin: 0.25em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.button{padding: 15px 32px;
+	font-size: 16px;}
