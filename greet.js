@@ -10,8 +10,8 @@ displayMsg.innerHTML="";
     var itemVal=radLang.value;
    // alert(greet.languageChoice(itemVal))
  displayMsg.innerHTML= greet.languageChoice(itemVal) ;
-     
- iCount.innerHTML=greet.inc();
-name.value='';
+ iCount.innerHTML=greet.greetCounter()
+
+ //name.value='';
 }
 btnDisplay.addEventListener("click",displayClick);
