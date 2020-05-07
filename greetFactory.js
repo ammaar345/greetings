@@ -1,23 +1,23 @@
 function Greet (){
     var msg;
-var iNum=1;
+
 // add a global variable
 var namesGreeted = {};
 var greetingsCounter=0;
-function greetCounter(){
+function greetCounter(userName){
    //when the greet button is pressed check if this user was already greeted before
 //by looking if the userName exists in namesGreeted if not increment this counter and update the screen
-if (namesGreeted[userName.value] === undefined){
+if (namesGreeted[userName] === undefined){
     greetingsCounter++;
     //add an entry for the user that was greeted in the Object Map
     namesGreeted[userName] = 0;
     //update the DOM to display the counter
-    return greetingsCounter; 
+     
 }
-
+return greetingsCounter;
 }
     function languageChoice(lang){
-        const name=userName.value;
+        const name=userN.value;
     if (lang==="English"){
         msg="Hello, "+name;
         
