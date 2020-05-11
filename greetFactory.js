@@ -1,6 +1,6 @@
 function Greet (){
     var msg;
-
+    let selectedValue;// if it doesnt work , move it back under the radio button declaration
 // add a global variable
 var namesGreeted = {};
 var greetingsCounter=0;
@@ -16,9 +16,29 @@ if (namesGreeted[userName] === undefined){
 }
 return greetingsCounter;
 }
+
+function checked(){
+    const radLang=document.querySelectorAll("input[name='languageType']");
+
+    
+            for (const rb of radLang) {
+                if (rb.checked) {
+                    selectedValue = rb.value;
+                    break;
+                }
+            }
+return selectedValue;
+        };
+function nullChecker(text){
+var text=userN.value
+if (text===""){
+    alert("Please enter your name")
+}
+}
     function languageChoice(lang){
-        const name=userN.value;
-    if (lang==="English"){
+        var name=userN.value;
+       
+      if (lang==="English"){
         msg="Hello, "+name;
         
     }
@@ -32,12 +52,16 @@ return greetingsCounter;
     msg="Molo ,"+name;
     
     } 
+    else  {
+        msg="Please Select a language"
+    }
     return msg
     }
 
 
     return {languageChoice,
-greetCounter
+greetCounter,
+checked
 
 
 }
