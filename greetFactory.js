@@ -29,40 +29,28 @@ return greetingsCounter;
 //             }
 // return selectedValue;
 //         };
-function nullChecker(text){
-var text=userN.value
-if (text===""){
-    alert("Please enter your name")
-}
-}
-    function languageChoice(name,lang){
-        //var name=userN.value;
-        if (name!=="" && lang.checked){
+
+    function languageChoice(lang){
+        var name=userN.value;
             
       if (lang==="English"){
         msg="Hello, "+name;
-        greet.greetCounter(name)
+       
     }
         else if (lang==="Afrikaans"){
     msg="Halo, "+name;
-    greet.greetCounter(name)
+    
     }
     
     else if(lang==="Xhosa")
     {
     msg="Molo ,"+name;
-    greet.greetCounter(name)
+   
     } 
+    
+    
     return msg
     }
-     if(name==="" && lang===undefined   )  {
-        msg="Please Select a language and/or enter your name.";
-        greetingsCounter=greetingsCounter
-    }
-    return msg
-    }
-
-
     return {languageChoice,
 greetCounter,
 //checked

@@ -7,12 +7,12 @@ const iCount=document.querySelector(".counter");
 
 
 function displayClick(){
-  const radLang=document.querySelector("input[name='languageType']");
-displayMsg.innerHTML="";
+  const radLang=document.querySelector("input[name='languageType']:checked");
+displayMsg.innerHTML=""; 
 var itemVal=radLang.value;
 var name=userN.value;
    // alert(greet.languageChoice(itemVal))
- displayMsg.innerHTML= greet.languageChoice(name,itemVal) ;
+ displayMsg.innerHTML= greet.languageChoice(itemVal) ;
  iCount.innerHTML=greet.greetCounter(name)
 //alert(itemVal)
  name.value='';
