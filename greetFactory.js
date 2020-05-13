@@ -1,6 +1,6 @@
 function Greet (){
     var msg;
-    let selectedValue;// if it doesnt work , move it back under the radio button declaration
+   // let selectedValue;// if it doesnt work , move it back under the radio button declaration
 // add a global variable
 var namesGreeted = {};
 var greetingsCounter=0;
@@ -17,43 +17,47 @@ if (namesGreeted[userName] === undefined){
 return greetingsCounter;
 }
 
-function checked(){
-    const radLang=document.querySelectorAll("input[name='languageType']");
+// function checked(){
+//     const radLang=document.querySelectorAll("input[name='languageType']");
 
     
-            for (const rb of radLang) {
-                if (rb.checked) {
-                    selectedValue = rb.value;
-                    break;
-                }
-            }
-return selectedValue;
-        };
+//             for (const rb of radLang) {
+//                 if (rb.checked) {
+//                     selectedValue = rb.value;
+//                     break;
+//                 }
+//             }
+// return selectedValue;
+//         };
 function nullChecker(text){
 var text=userN.value
 if (text===""){
     alert("Please enter your name")
 }
 }
-    function languageChoice(lang){
-        var name=userN.value;
-       
+    function languageChoice(name,lang){
+        //var name=userN.value;
+        if (name!=="" && lang.checked){
+            
       if (lang==="English"){
         msg="Hello, "+name;
-        
+        greet.greetCounter(name)
     }
         else if (lang==="Afrikaans"){
     msg="Halo, "+name;
-    
+    greet.greetCounter(name)
     }
     
     else if(lang==="Xhosa")
     {
     msg="Molo ,"+name;
-    
+    greet.greetCounter(name)
     } 
-    else  {
-        msg="Please Select a language"
+    return msg
+    }
+     if(name==="" && lang===undefined   )  {
+        msg="Please Select a language and/or enter your name.";
+        greetingsCounter=greetingsCounter
     }
     return msg
     }
@@ -61,7 +65,7 @@ if (text===""){
 
     return {languageChoice,
 greetCounter,
-checked
+//checked
 
 
 }

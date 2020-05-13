@@ -1,18 +1,20 @@
+let greet=Greet();
 const userN=document.querySelector(".nameOfUser");
 const btnDisplay=document.querySelector(".btnDisplay");
 const displayMsg=document.querySelector(".msg");
 const iCount=document.querySelector(".counter");
-let greet=Greet();
+
+
 
 function displayClick(){
-
+  const radLang=document.querySelector("input[name='languageType']");
 displayMsg.innerHTML="";
-
-    var itemVal=radLang.value;
+var itemVal=radLang.value;
+var name=userN.value;
    // alert(greet.languageChoice(itemVal))
- displayMsg.innerHTML= greet.languageChoice(itemVal) ;
- iCount.innerHTML=greet.greetCounter(userN.value)
-alert(itemVal)
+ displayMsg.innerHTML= greet.languageChoice(name,itemVal) ;
+ iCount.innerHTML=greet.greetCounter(name)
+//alert(itemVal)
  name.value='';
 }
-btnDisplay.addEventListener("click",checked);
+btnDisplay.addEventListener("click",displayClick);
