@@ -1,5 +1,6 @@
 function Greet(initialState) {
     var msg;
+    
     // let selectedValue;// if it doesnt work , move it back under the radio button declaration
     // add a global variable
     var namesGreeted = initialState ? initialState :{};
@@ -14,6 +15,7 @@ function Greet(initialState) {
             //update the DOM to display the counter
 
         }
+        
 //        else if(namesGreeted[userName]===0){
 // namesGreeted[userName]=1
 //         } 
@@ -37,22 +39,36 @@ function nameStorage(){
 
 
 }
-    // function checked(){
-    //     const radLang=document.querySelectorAll("input[name='languageType']");
+//     function checked(){
+//         const radLang=document.querySelectorAll("input[name='languageType']");
 
 
-    //             for (const rb of radLang) {
-    //                 if (rb.checked) {
-    //                     selectedValue = rb.value;
-    //                     break;
-    //                 }
-    //             }
-    // return selectedValue;
-    //         };
+//                 for (const rb of radLang) {
+//                     if (rb.checked) {
+//                         selectedValue = rb.value;
+//                         break;
+//                     }
+//                 }
+//     return selectedValue;
+//      };
+// function validate(){
+//     if (name==="" && lang===null){
+// msg="Please Select A Language And Enter A Username."
 
+//     }
+//     else if(name===""){
+// msg="Please enter a username."
+//     }
+//     else if(lang===null){
+// msg ="Please Select A Language"
+//     }
+// }
+//parameters in side language choice lang,name//
     function languageChoice(lang,name) {
-        
-        if (lang === "English") {
+       if (lang===null){
+           msg="Please Select A Language"
+       }
+         else if (lang === "English") {
             msg = "Hello, " + name;
 
         }
@@ -73,7 +89,7 @@ function nameStorage(){
         languageChoice,
         greetCounter,
         nameStorage,
-     
+     checked,
         countNamesStorage
 
     }
