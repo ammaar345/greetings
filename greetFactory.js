@@ -89,7 +89,7 @@ function nameStorage(){
         languageChoice,
         greetCounter,
         nameStorage,
-     checked,
+    // checked,
         countNamesStorage
 
     }

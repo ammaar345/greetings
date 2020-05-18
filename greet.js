@@ -17,14 +17,14 @@ iCount.innerHTML = greet.countNamesStorage();
 ///
 function displayClick() {
   var name = userN.value;
- // const radLang = document.querySelector("input[name='languageType']:checked");
+  const radLang = document.querySelector("input[name='languageType']:checked");
   displayMsg.innerHTML = "";
   var itemVal = radLang.value;
   // alert(greet.languageChoice(itemVal))
   displayMsg.innerHTML = greet.languageChoice(itemVal, name);
   greet.greetCounter(name);
   iCount.innerHTML = greet.countNamesStorage();
-
+ // greet.languageChoice(itemVal, name);
   var storingNames = greet.nameStorage();
   var nameStrings = JSON.stringify(storingNames);
   localStorage['Names'] = nameStrings;
