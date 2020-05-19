@@ -30,7 +30,7 @@ alert(language)
   //var itemVal = radLang.value;
   // alert(greet.languageChoice(itemVal))
   greet.validate();
-  displayMsg.innerHTML=greet.validate(name,language);
+//  displayMsg.innerHTML=greet.validate(name,language);
   displayMsg.innerHTML = greet.languageChoice(language, name);
   greet.greetCounter(name);
   iCount.innerHTML = greet.countNamesStorage();
