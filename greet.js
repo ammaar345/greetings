@@ -1,27 +1,37 @@
-const userN = document.querySelector(".nameOfUser");
-const btnDisplay = document.querySelector(".btnDisplay");
-const displayMsg = document.querySelector(".msg");
-const iCount = document.querySelector(".counter");
-const storedNameState = localStorage["Names"];
-///
 let nameState;
 if (localStorage["Names"]) {
   nameState = JSON.parse(localStorage['Names'])
 
 
 }
-///
-///
 const greet = Greet(nameState);
+
+const userN = document.querySelector(".nameOfUser");
+const btnDisplay = document.querySelector(".btnDisplay");
+const displayMsg = document.querySelector(".msg");
+const iCount = document.querySelector(".counter");
+const storedNameState = localStorage["Names"];
+let language="";
+let name=""
+///
+///
+///
 iCount.innerHTML = greet.countNamesStorage();
 ///
 function displayClick() {
   var name = userN.value;
   const radLang = document.querySelector("input[name='languageType']:checked");
+ 
+if (radLang){
+language=radLang.value;
+}
+alert(language)
   displayMsg.innerHTML = "";
-  var itemVal = radLang.value;
+  //var itemVal = radLang.value;
   // alert(greet.languageChoice(itemVal))
-  displayMsg.innerHTML = greet.languageChoice(itemVal, name);
+  greet.validate();
+  displayMsg.innerHTML=greet.validate(name,language);
+  displayMsg.innerHTML = greet.languageChoice(language, name);
   greet.greetCounter(name);
   iCount.innerHTML = greet.countNamesStorage();
  // greet.languageChoice(itemVal, name);

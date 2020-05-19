@@ -50,25 +50,26 @@ function nameStorage(){
 //                     }
 //                 }
 //     return selectedValue;
-//      };
-// function validate(){
-//     if (name==="" && lang===null){
-// msg="Please Select A Language And Enter A Username."
+    // };
+// function validate(name,lang){
+    
+//     if(name===""){
+//         msg="Please enter a username."
+//             }
+            
+//     else if(lang===""){
+//         msg ="Please Select A Language"
+//             }
+//     else if (name==="" && lang===""){
+// msg="Please Select A Language And  A Username."
 
 //     }
-//     else if(name===""){
-// msg="Please enter a username."
-//     }
-//     else if(lang===null){
-// msg ="Please Select A Language"
-//     }
-// }
+    
+//  }
 //parameters in side language choice lang,name//
     function languageChoice(lang,name) {
-       if (lang===null){
-           msg="Please Select A Language"
-       }
-         else if (lang === "English") {
+        if (name!=="" && lang!==""){
+        if (lang === "English") {
             msg = "Hello, " + name;
 
         }
@@ -83,13 +84,18 @@ function nameStorage(){
         }
 
 
-        return msg
-    }
+    }else {msg="Please enter a username and/or select a language."
+
+}
+
+    return msg
+}
     return {
         languageChoice,
         greetCounter,
         nameStorage,
     // checked,
+   // validate,
         countNamesStorage
 
     }
