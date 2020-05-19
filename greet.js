@@ -1,4 +1,4 @@
-let nameState;
+  let nameState;
 if (localStorage["Names"]) {
   nameState = JSON.parse(localStorage['Names'])
 
@@ -29,8 +29,8 @@ alert(language)
   displayMsg.innerHTML = "";
   //var itemVal = radLang.value;
   // alert(greet.languageChoice(itemVal))
-  greet.validate();
-//  displayMsg.innerHTML=greet.validate(name,language);
+  //greet.validate();
+  displayMsg.innerHTML=greet.validate(language,name);
   displayMsg.innerHTML = greet.languageChoice(language, name);
   greet.greetCounter(name);
   iCount.innerHTML = greet.countNamesStorage();
