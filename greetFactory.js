@@ -85,9 +85,7 @@ function validate(lang,name){
         }
 
 
-//     }else {msg="Please enter a username and/or select a language."
 
-// }
 
    
 }

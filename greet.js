@@ -25,7 +25,7 @@ function displayClick() {
 if (radLang){
 language=radLang.value;
 }
-alert(language)
+
   displayMsg.innerHTML = "";
   //var itemVal = radLang.value;
   // alert(greet.languageChoice(itemVal))
