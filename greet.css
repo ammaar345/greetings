@@ -11,4 +11,10 @@ margin: 0;}
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .button{padding: 15px 32px;
-	font-size: 16px;}
+    font-size: 16px;}
+    .space input[type="button"] {
+	background-color : dodgerblue;
+	padding: 15px 32px;
+    font-size: 16px;
+    border-radius: 1em;
+}
